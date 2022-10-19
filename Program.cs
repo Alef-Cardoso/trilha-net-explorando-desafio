@@ -13,7 +13,17 @@ hospedes.Add(p1);
 hospedes.Add(p2);
 
 // Cria a suíte
-Suite suite = new Suite(tipoSuite: "Premium", capacidade: 2, valorDiaria: 30);
+Suite suite = new Suite();
+Console.WriteLine("digite a capacidade de hospedes");
+suite.Capacidade= Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("digite a valor diaria");
+suite.ValorDiaria = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("digite tipo de Suite");
+suite.TipoSuite = Console.ReadLine();
+
+
 
 // Cria uma nova reserva, passando a suíte e os hóspedes
 Reserva reserva = new Reserva(diasReservados: 5);
